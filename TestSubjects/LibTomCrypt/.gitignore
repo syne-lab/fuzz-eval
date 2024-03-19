@@ -1,0 +1,6 @@
+build/
+.vscode/
+libtomcrypt-1.18.2/
+libtommath-1.2.0/
+mbedtls-2.26.0/
+openssl/

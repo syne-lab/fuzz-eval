@@ -1,0 +1,5 @@
+afl-2.57, afl++-4.07, aflsmart
+darwin, honggfuzz, libfuzzer
+morpheus, nautilus, sgfuzz
+peach, isla
+

@@ -1,0 +1,147 @@
+# AFL++ 4.07
+darwin: # should be in the name of the image (e.g, image name will be "numan947/afl++-4.07:fuzzer")
+  name: "Darwin"
+  testsubjects:
+    axtls:
+      path: "TestSubjects/AxTLS"
+      harnessdir: "default" # must be under path
+      baseimage: "darwin"
+      fc_configpath: "/Config/darwin-axtls.toml"
+      image_name: "darwin-axtls"
+      #below are running config
+      memory: "8g"
+      cpuset: "0-2"
+      resultsdir: "Results/"
+      configdir: "FCConfig/DARWIN"
+    
+    botan:
+      path: "TestSubjects/Botan"
+      harnessdir: "default" # must be under path
+      baseimage: "darwin"
+      fc_configpath: "/Config/darwin-botan.toml"
+      image_name: "darwin-botan"
+      memory: "8g"
+      cpuset: "3-5"
+      resultsdir: "Results/"
+      configdir: "FCConfig/DARWIN"
+
+    cryptopp:
+      path: "TestSubjects/Crypto++"
+      harnessdir: "default" # must be under path
+      baseimage: "darwin"
+      fc_configpath: "/Config/darwin-cryptopp.toml"
+      image_name: "darwin-cryptopp"
+      memory: "8g"
+      cpuset: "6-8"
+      resultsdir: "Results/"
+      configdir: "FCConfig/DARWIN"
+
+    gnutls:
+      path: "TestSubjects/GnuTLS"
+      harnessdir: "default" # must be under path
+      baseimage: "darwin"
+      fc_configpath: "/Config/darwin-gnutls.toml"
+      image_name: "darwin-gnutls"
+      memory: "8g"
+      cpuset: "9-11"
+      resultsdir: "Results/"
+      configdir: "FCConfig/DARWIN"
+
+    hostapd:
+      path: "TestSubjects/Hostapd"
+      harnessdir: "default" # must be under path
+      baseimage: "darwin"
+      fc_configpath: "/Config/darwin-hostapd.toml"
+      image_name: "darwin-hostapd"
+      memory: "8g"
+      cpuset: "12-14"
+      resultsdir: "Results/"
+      configdir: "FCConfig/DARWIN"
+
+    libtomcrypt:
+      path: "TestSubjects/LibTomCrypt"
+      harnessdir: "default" # must be under path
+      baseimage: "darwin" # baseimage is the name of the docker image with the FUZZEVAL_TAG tag
+      fc_configpath: "/Config/darwin-libtomcrypt.toml"
+      image_name: "darwin-libtomcrypt" # image will be created with the name and the FUZZEVAL_TAG tag
+      memory: "8g"
+      cpuset: "15-17"
+      resultsdir: "Results/"
+      configdir: "FCConfig/DARWIN"
+
+    matrixssl:
+      path: "TestSubjects/MatrixSSL"
+      harnessdir: "default" # must be under path
+      baseimage: "darwin"
+      fc_configpath: "/Config/darwin-matrixssl.toml"
+      image_name: "darwin-matrixssl"
+      memory: "8g"
+      cpuset: "18-20"
+      resultsdir: "Results/"
+      configdir: "FCConfig/DARWIN"
+
+    mbedtls:
+      path: "TestSubjects/MBedTLS"
+      harnessdir: "default" # must be under path
+      baseimage: "darwin"
+      fc_configpath: "/Config/darwin-mbedtls.toml"
+      image_name: "darwin-mbedtls"
+      memory: "8g"
+      cpuset: "21-23"
+      resultsdir: "Results/"
+      configdir: "FCConfig/DARWIN"
+
+    openssl3:
+      path: "TestSubjects/OpenSSL3"
+      harnessdir: "default" # must be under path
+      baseimage: "darwin"
+      fc_configpath: "/Config/darwin-openssl.toml"
+      image_name: "darwin-openssl3"
+      memory: "8g"
+      cpuset: "24-26"
+      resultsdir: "Results/"
+      configdir: "FCConfig/DARWIN"
+
+    openssl1:
+      path: "TestSubjects/OpenSSL1"
+      harnessdir: "default" # must be under path
+      baseimage: "darwin"
+      fc_configpath: "/Config/darwin-openssl1.toml"
+      image_name: "darwin-openssl1"
+      memory: "8g"
+      cpuset: "27-29"
+      resultsdir: "Results/"
+      configdir: "FCConfig/DARWIN"
+
+    openswan:
+      path: "TestSubjects/OpenSwan"
+      harnessdir: "default" # must be under path
+      baseimage: "darwin"
+      fc_configpath: "/Config/darwin-openswan.toml"
+      image_name: "darwin-openswan"
+      memory: "8g"
+      cpuset: "30-32"
+      resultsdir: "Results/"
+      configdir: "FCConfig/DARWIN"
+
+    strongswan:
+      path: "TestSubjects/StrongSwan"
+      harnessdir: "default" # must be under path
+      baseimage: "darwin"
+      fc_configpath: "/Config/darwin-strongswan.toml"
+      image_name: "darwin-strongswan"
+      memory: "8g"
+      cpuset: "33-35"
+      resultsdir: "Results/"
+      configdir: "FCConfig/DARWIN"
+
+    wpasupplicant:
+      path: "TestSubjects/WpaSupplicant"
+      harnessdir: "default" # must be under path
+      baseimage: "darwin"
+      fc_configpath: "/Config/darwin-wpasupplicant.toml"
+      image_name: "darwin-wpasupplicant"
+      memory: "8g"
+      cpuset: "36-38"
+      resultsdir: "Results/"
+      configdir: "FCConfig/DARWIN"

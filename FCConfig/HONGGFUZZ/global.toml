@@ -1,0 +1,6 @@
+results_dir = "/Results/HONGGFUZZ/10HR"
+fuzzer_fuzztime=36000# seconds
+fuzzer_harness_timeout=7000
+rng_seedlist=[1,3,5,7,9] # optional, list of seeds to be used with rng, if used then in the fuzzer command, specify the position using RNG special string
+fuzzer_command="/honggfuzz/honggfuzz -t TIMEOUT  --run_time FUZZTIME -i SEEDDIR -- HARNESSPATH ___FILE___ PORT" 
+# /honggfuzz --run_time 60 --rlimit_rss 5 -i /vagrant/Fuzzing-Module/Fuzzers/HonggFuzz/Test_LibtomCrypt/TEST -- /vagrant/Fuzzing-Module/Fuzzers/HonggFuzz/Test_LibtomCrypt/build/libtomcrypt_harness -fork=1 --888

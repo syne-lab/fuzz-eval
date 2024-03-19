@@ -1,0 +1,13 @@
+{
+	"files.associations": {
+		"csignal": "cpp",
+		"sstream": "cpp",
+		"inet.h": "c",
+		"python.h": "c"
+	},
+	"files.exclude": {
+		"**/.git": true,         // this is a default value
+		"**/.DS_Store": true,    // this is a default value
+		"/Results": true,
+	}
+}

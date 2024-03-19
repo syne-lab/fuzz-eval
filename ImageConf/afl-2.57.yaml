@@ -1,0 +1,147 @@
+# AFL++ 4.07
+afl-2.57: # should be in the name of the image (e.g, image name will be "numan947/afl++-4.07:fuzzer")
+  name: "AFL 2.57"
+  testsubjects:
+    axtls:
+      path: "TestSubjects/AxTLS"
+      harnessdir: "default" # must be under path
+      baseimage: "afl-2.57"
+      fc_configpath: "/Config/afl2.57-axtls.toml"
+      image_name: "afl2.57-axtls"
+      #below are running config
+      memory: "8g"
+      cpuset: "39-41"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFL2.57"
+    
+    botan:
+      path: "TestSubjects/Botan"
+      harnessdir: "default" # must be under path
+      baseimage: "afl-2.57"
+      fc_configpath: "/Config/afl2.57-botan.toml"
+      image_name: "afl2.57-botan"
+      memory: "8g"
+      cpuset: "42-44"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFL2.57"
+
+    cryptopp:
+      path: "TestSubjects/Crypto++"
+      harnessdir: "default" # must be under path
+      baseimage: "afl-2.57"
+      fc_configpath: "/Config/afl2.57-cryptopp.toml"
+      image_name: "afl2.57-cryptopp"
+      memory: "8g"
+      cpuset: "45-47"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFL2.57"
+
+    gnutls:
+      path: "TestSubjects/GnuTLS"
+      harnessdir: "default" # must be under path
+      baseimage: "afl-2.57"
+      fc_configpath: "/Config/afl2.57-gnutls.toml"
+      image_name: "afl2.57-gnutls"
+      memory: "8g"
+      cpuset: "48-50"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFL2.57"
+
+    hostapd:
+      path: "TestSubjects/Hostapd"
+      harnessdir: "default" # must be under path
+      baseimage: "afl-2.57"
+      fc_configpath: "/Config/afl2.57-hostapd.toml"
+      image_name: "afl2.57-hostapd"
+      memory: "8g"
+      cpuset: "51-53"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFL2.57"
+
+    libtomcrypt:
+      path: "TestSubjects/LibTomCrypt"
+      harnessdir: "default" # must be under path
+      baseimage: "afl-2.57" # baseimage is the name of the docker image with the FUZZEVAL_TAG tag
+      fc_configpath: "/Config/afl2.57-libtomcrypt.toml"
+      image_name: "afl2.57-libtomcrypt" # image will be created with the name and the FUZZEVAL_TAG tag
+      memory: "8g"
+      cpuset: "54-56"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFL2.57"
+
+    matrixssl:
+      path: "TestSubjects/MatrixSSL"
+      harnessdir: "default" # must be under path
+      baseimage: "afl-2.57"
+      fc_configpath: "/Config/afl2.57-matrixssl.toml"
+      image_name: "afl2.57-matrixssl"
+      memory: "8g"
+      cpuset: "57-59"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFL2.57"
+
+    mbedtls:
+      path: "TestSubjects/MBedTLS"
+      harnessdir: "default" # must be under path
+      baseimage: "afl-2.57"
+      fc_configpath: "/Config/afl2.57-mbedtls.toml"
+      image_name: "afl2.57-mbedtls"
+      memory: "8g"
+      cpuset: "60-62"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFL2.57"
+
+    openssl3:
+      path: "TestSubjects/OpenSSL3"
+      harnessdir: "default" # must be under path
+      baseimage: "afl-2.57"
+      fc_configpath: "/Config/afl2.57-openssl.toml"
+      image_name: "afl2.57-openssl3"
+      memory: "8g"
+      cpuset: "63-65"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFL2.57"
+
+    openssl1:
+      path: "TestSubjects/OpenSSL1"
+      harnessdir: "default" # must be under path
+      baseimage: "afl-2.57"
+      fc_configpath: "/Config/afl2.57-openssl1.toml"
+      image_name: "afl2.57-openssl1"
+      memory: "8g"
+      cpuset: "66-68"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFL2.57"
+
+    openswan:
+      path: "TestSubjects/OpenSwan"
+      harnessdir: "default" # must be under path
+      baseimage: "afl-2.57"
+      fc_configpath: "/Config/afl2.57-openswan.toml"
+      image_name: "afl2.57-openswan"
+      memory: "8g"
+      cpuset: "69-71"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFL2.57"
+
+    strongswan:
+      path: "TestSubjects/StrongSwan"
+      harnessdir: "default" # must be under path
+      baseimage: "afl-2.57"
+      fc_configpath: "/Config/afl2.57-strongswan.toml"
+      image_name: "afl2.57-strongswan"
+      memory: "8g"
+      cpuset: "72-74"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFL2.57"
+
+    wpasupplicant:
+      path: "TestSubjects/WpaSupplicant"
+      harnessdir: "default" # must be under path
+      baseimage: "afl-2.57"
+      fc_configpath: "/Config/afl2.57-wpasupplicant.toml"
+      image_name: "afl2.57-wpasupplicant"
+      memory: "8g"
+      cpuset: "75-77"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFL2.57"

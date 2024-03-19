@@ -1,0 +1,19 @@
+results_dir = "/Results" # directory for creating folder and files and save the results
+fc_name="honggfuzz-wpasupplicant" # name of the fuzzing campaign, will be used for creating a folder
+
+server_port=3013 # port for running the server
+server_log_file_prefix="log_"
+server_backlog = 15000
+server_stop_command="STOP_SERVER_NOW"
+
+
+fuzzer_fuzztime=1200# seconds
+fuzzer_out_dir_name="out_wpasupplicant_honggfuzz"# path to fuzzer output directory, will be created inside the results dir, should be a name only, not a path
+fuzzer_seed_dir="/target/seeds/" # should be absolute path
+fuzzer_harness_timeout=4000
+fuzzer_harness_path="/target/wpa_supplicant-2.9/wpa_supplicant/wpa_supplicant" # should be absolute path
+
+
+
+fuzzer_command="/honggfuzz/honggfuzz --run_time FUZZTIME -i SEEDDIR -- HARNESSPATH --PORT" 
+rng_seedlist=[345] # optional, list of seeds to be used with rng, if used then in the fuzzer command, specify the position using RNG special string

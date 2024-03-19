@@ -1,0 +1,21 @@
+results_dir = "/Results/" # directory for creating folder and files and save the results
+fc_name="nautilus-libtomcrypt" # name of the fuzzing campaign, will be used for creating a folder
+
+server_port=8006 # port for running the server
+server_log_file_prefix="log_"
+server_backlog = 15000
+server_stop_command="STOP_SERVER_NOW"
+
+
+fuzzer_fuzztime=300# seconds
+fuzzer_out_dir_name="out_libtomcrypt_nautilus"# path to fuzzer output directory, will be created inside the results dir, should be a name only, not a path
+# fuzzer_seed_dir="/vagrant/Fuzzing-Module/Fuzzers/AFLPP/Test_LibtomCrypt/seeds" # should be absolute path
+fuzzer_harness_timeout=2000 
+fuzzer_harness_path="/target/build/libtomcrypt_harness" # should be absolute path
+# fuzzer_dict_path = "/vagrant/PKCS_SPEC/pkcs1.dict"
+
+# fuzzer command to run the fuzzer
+fuzzer_command="/nautilus/target/release/fuzzer -c /target/config.ron -g /target/pkcs_grammar.py -o OUTDIR -- HARNESSPATH @@ PORT" 
+
+rng_seedlist=[345] # optional, list of seeds to be used with rng, if used then in the fuzzer command, specify the position using RNG special string
+

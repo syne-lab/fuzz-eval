@@ -1,0 +1,147 @@
+# AFL++ 4.07
+honggfuzz: # should be in the name of the image (e.g, image name will be "numan947/afl++-4.07:fuzzer")
+  name: "Honggfuzz"
+  testsubjects:
+    axtls:
+      path: "TestSubjects/AxTLS"
+      harnessdir: "default" # must be under path
+      baseimage: "honggfuzz"
+      fc_configpath: "/Config/honggfuzz-axtls.toml"
+      image_name: "honggfuzz-axtls"
+      #below are running config
+      memory: "8g"
+      cpuset: "39-41"
+      resultsdir: "Results/"
+      configdir: "FCConfig/HONGGFUZZ"
+    
+    botan:
+      path: "TestSubjects/Botan"
+      harnessdir: "default" # must be under path
+      baseimage: "honggfuzz"
+      fc_configpath: "/Config/honggfuzz-botan.toml"
+      image_name: "honggfuzz-botan"
+      memory: "8g"
+      cpuset: "42-44"
+      resultsdir: "Results/"
+      configdir: "FCConfig/HONGGFUZZ"
+
+    cryptopp:
+      path: "TestSubjects/Crypto++"
+      harnessdir: "default" # must be under path
+      baseimage: "honggfuzz"
+      fc_configpath: "/Config/honggfuzz-cryptopp.toml"
+      image_name: "honggfuzz-cryptopp"
+      memory: "8g"
+      cpuset: "45-47"
+      resultsdir: "Results/"
+      configdir: "FCConfig/HONGGFUZZ"
+
+    gnutls:
+      path: "TestSubjects/GnuTLS"
+      harnessdir: "default" # must be under path
+      baseimage: "honggfuzz"
+      fc_configpath: "/Config/honggfuzz-gnutls.toml"
+      image_name: "honggfuzz-gnutls"
+      memory: "8g"
+      cpuset: "48-50"
+      resultsdir: "Results/"
+      configdir: "FCConfig/HONGGFUZZ"
+
+    hostapd:
+      path: "TestSubjects/Hostapd"
+      harnessdir: "default" # must be under path
+      baseimage: "honggfuzz"
+      fc_configpath: "/Config/honggfuzz-hostapd.toml"
+      image_name: "honggfuzz-hostapd"
+      memory: "8g"
+      cpuset: "51-53"
+      resultsdir: "Results/"
+      configdir: "FCConfig/HONGGFUZZ"
+
+    libtomcrypt:
+      path: "TestSubjects/LibTomCrypt"
+      harnessdir: "default" # must be under path
+      baseimage: "honggfuzz" # baseimage is the name of the docker image with the FUZZEVAL_TAG tag
+      fc_configpath: "/Config/honggfuzz-libtomcrypt.toml"
+      image_name: "honggfuzz-libtomcrypt" # image will be created with the name and the FUZZEVAL_TAG tag
+      memory: "8g"
+      cpuset: "54-56"
+      resultsdir: "Results/"
+      configdir: "FCConfig/HONGGFUZZ"
+
+    matrixssl:
+      path: "TestSubjects/MatrixSSL"
+      harnessdir: "default" # must be under path
+      baseimage: "honggfuzz"
+      fc_configpath: "/Config/honggfuzz-matrixssl.toml"
+      image_name: "honggfuzz-matrixssl"
+      memory: "8g"
+      cpuset: "57-59"
+      resultsdir: "Results/"
+      configdir: "FCConfig/HONGGFUZZ"
+
+    mbedtls:
+      path: "TestSubjects/MBedTLS"
+      harnessdir: "default" # must be under path
+      baseimage: "honggfuzz"
+      fc_configpath: "/Config/honggfuzz-mbedtls.toml"
+      image_name: "honggfuzz-mbedtls"
+      memory: "8g"
+      cpuset: "60-62"
+      resultsdir: "Results/"
+      configdir: "FCConfig/HONGGFUZZ"
+
+    openssl3:
+      path: "TestSubjects/OpenSSL3"
+      harnessdir: "default" # must be under path
+      baseimage: "honggfuzz"
+      fc_configpath: "/Config/honggfuzz-openssl.toml"
+      image_name: "honggfuzz-openssl3"
+      memory: "8g"
+      cpuset: "63-65"
+      resultsdir: "Results/"
+      configdir: "FCConfig/HONGGFUZZ"
+
+    openssl1:
+      path: "TestSubjects/OpenSSL1"
+      harnessdir: "default" # must be under path
+      baseimage: "honggfuzz"
+      fc_configpath: "/Config/honggfuzz-openssl1.toml"
+      image_name: "honggfuzz-openssl1"
+      memory: "8g"
+      cpuset: "66-68"
+      resultsdir: "Results/"
+      configdir: "FCConfig/HONGGFUZZ"
+
+    openswan:
+      path: "TestSubjects/OpenSwan"
+      harnessdir: "default" # must be under path
+      baseimage: "honggfuzz"
+      fc_configpath: "/Config/honggfuzz-openswan.toml"
+      image_name: "honggfuzz-openswan"
+      memory: "8g"
+      cpuset: "69-71"
+      resultsdir: "Results/"
+      configdir: "FCConfig/HONGGFUZZ"
+
+    strongswan:
+      path: "TestSubjects/StrongSwan"
+      harnessdir: "default" # must be under path
+      baseimage: "honggfuzz"
+      fc_configpath: "/Config/honggfuzz-strongswan.toml"
+      image_name: "honggfuzz-strongswan"
+      memory: "8g"
+      cpuset: "72-74"
+      resultsdir: "Results/"
+      configdir: "FCConfig/HONGGFUZZ"
+
+    wpasupplicant:
+      path: "TestSubjects/WpaSupplicant"
+      harnessdir: "default" # must be under path
+      baseimage: "honggfuzz"
+      fc_configpath: "/Config/honggfuzz-wpasupplicant.toml"
+      image_name: "honggfuzz-wpasupplicant"
+      memory: "8g"
+      cpuset: "75-77"
+      resultsdir: "Results/"
+      configdir: "FCConfig/HONGGFUZZ"

@@ -1,0 +1,8 @@
+rm -rf TEST
+cp -r seeds TEST
+
+FLAGS=-fsanitize=fuzzer-no-link
+CC=$FUZZERCC CXX=$FUZZERCXX CXXFLAGS=$FLAGS CFLAGS=$FLAGS CPPFLAGS=$FLAGS LDFLAGS=$FLAGS ./build-axtls.sh
+sleep 2
+CC=$FUZZERCC CXX=$FUZZERCXX CXXFLAGS=$FLAGS CFLAGS=$FLAGS CPPFLAGS=$FLAGS LDFLAGS=$FLAGS ./copy-and-build-harness.sh
+cp -r seeds TEST

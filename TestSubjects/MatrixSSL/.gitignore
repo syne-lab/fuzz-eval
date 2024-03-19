@@ -1,0 +1,16 @@
+*.o
+test-harness/pkcs1
+matrixssl-4-3-0-open/
+openssl-1.1.1k/
+*.o
+pkcs1
+*.o
+gmp-6.1.2/
+strongswan-5.9.2/
+Openswan-3.0.0/
+build/
+.vscode/
+libtomcrypt-1.18.2/
+libtommath-1.2.0/
+mbedtls-2.26.0/
+openssl/

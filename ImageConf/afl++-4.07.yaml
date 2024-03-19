@@ -1,0 +1,147 @@
+# AFL++ 4.07
+afl++-4.07: # should be in the name of the image (e.g, image name will be "numan947/afl++-4.07:fuzzer")
+  name: "AFL++ 4.07"
+  testsubjects:
+    axtls:
+      path: "TestSubjects/AxTLS"
+      harnessdir: "default" # must be under path
+      baseimage: "aflpp-4.07"
+      fc_configpath: "/Config/aflpp-axtls.toml"
+      image_name: "aflpp-axtls"
+      #below are running config
+      memory: "8g"
+      cpuset: "0-2"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLPP"
+    
+    botan:
+      path: "TestSubjects/Botan"
+      harnessdir: "default" # must be under path
+      baseimage: "aflpp-4.07"
+      fc_configpath: "/Config/aflpp-botan.toml"
+      image_name: "aflpp-botan"
+      memory: "8g"
+      cpuset: "3-5"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLPP"
+
+    cryptopp:
+      path: "TestSubjects/Crypto++"
+      harnessdir: "default" # must be under path
+      baseimage: "aflpp-4.07"
+      fc_configpath: "/Config/aflpp-cryptopp.toml"
+      image_name: "aflpp-cryptopp"
+      memory: "8g"
+      cpuset: "6-8"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLPP"
+
+    gnutls:
+      path: "TestSubjects/GnuTLS"
+      harnessdir: "default" # must be under path
+      baseimage: "aflpp-4.07"
+      fc_configpath: "/Config/aflpp-gnutls.toml"
+      image_name: "aflpp-gnutls"
+      memory: "8g"
+      cpuset: "9-11"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLPP"
+
+    hostapd:
+      path: "TestSubjects/Hostapd"
+      harnessdir: "default" # must be under path
+      baseimage: "aflpp-4.07"
+      fc_configpath: "/Config/aflpp-hostapd.toml"
+      image_name: "aflpp-hostapd"
+      memory: "8g"
+      cpuset: "12-14"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLPP"
+
+    libtomcrypt:
+      path: "TestSubjects/LibTomCrypt"
+      harnessdir: "default" # must be under path
+      baseimage: "aflpp-4.07" # baseimage is the name of the docker image with the FUZZEVAL_TAG tag
+      fc_configpath: "/Config/aflpp-libtomcrypt.toml"
+      image_name: "aflpp-libtomcrypt" # image will be created with the name and the FUZZEVAL_TAG tag
+      memory: "8g"
+      cpuset: "15-17"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLPP"
+
+    matrixssl:
+      path: "TestSubjects/MatrixSSL"
+      harnessdir: "default" # must be under path
+      baseimage: "aflpp-4.07"
+      fc_configpath: "/Config/aflpp-matrixssl.toml"
+      image_name: "aflpp-matrixssl"
+      memory: "8g"
+      cpuset: "18-20"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLPP"
+
+    mbedtls:
+      path: "TestSubjects/MBedTLS"
+      harnessdir: "default" # must be under path
+      baseimage: "aflpp-4.07"
+      fc_configpath: "/Config/aflpp-mbedtls.toml"
+      image_name: "aflpp-mbedtls"
+      memory: "8g"
+      cpuset: "21-23"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLPP"
+
+    openssl3:
+      path: "TestSubjects/OpenSSL3"
+      harnessdir: "default" # must be under path
+      baseimage: "aflpp-4.07"
+      fc_configpath: "/Config/aflpp-openssl.toml"
+      image_name: "aflpp-openssl3"
+      memory: "8g"
+      cpuset: "24-26"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLPP"
+
+    openssl1:
+      path: "TestSubjects/OpenSSL1"
+      harnessdir: "default" # must be under path
+      baseimage: "aflpp-4.07"
+      fc_configpath: "/Config/aflpp-openssl1.toml"
+      image_name: "aflpp-openssl1"
+      memory: "8g"
+      cpuset: "27-29"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLPP"
+
+    openswan:
+      path: "TestSubjects/OpenSwan"
+      harnessdir: "default" # must be under path
+      baseimage: "aflpp-4.07"
+      fc_configpath: "/Config/aflpp-openswan.toml"
+      image_name: "aflpp-openswan"
+      memory: "8g"
+      cpuset: "30-32"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLPP"
+
+    strongswan:
+      path: "TestSubjects/StrongSwan"
+      harnessdir: "default" # must be under path
+      baseimage: "aflpp-4.07"
+      fc_configpath: "/Config/aflpp-strongswan.toml"
+      image_name: "aflpp-strongswan"
+      memory: "8g"
+      cpuset: "33-35"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLPP"
+
+    wpasupplicant:
+      path: "TestSubjects/WpaSupplicant"
+      harnessdir: "default" # must be under path
+      baseimage: "aflpp-4.07"
+      fc_configpath: "/Config/aflpp-wpasupplicant.toml"
+      image_name: "aflpp-wpasupplicant"
+      memory: "8g"
+      cpuset: "36-38"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLPP"

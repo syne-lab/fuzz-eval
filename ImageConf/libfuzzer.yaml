@@ -1,0 +1,147 @@
+libfuzzer: # should be in the name of the image (e.g, image name will be "numan947/libfuzzer:fuzzer")
+  name: "libFuzzer"
+  testsubjects:
+    axtls:
+      path: "TestSubjects/AxTLS"
+      harnessdir: "libfuzzer" # must be under path
+      baseimage: "libfuzzer"
+      fc_configpath: "/Config/libfuzzer-axtls.toml"
+      image_name: "libfuzzer-axtls"
+      #below are running config
+      memory: "8g"
+      cpuset: "78-80"
+      resultsdir: "Results/"
+      configdir: "FCConfig/LIBFUZZER"
+    
+    botan:
+      path: "TestSubjects/Botan"
+      harnessdir: "libfuzzer" # must be under path
+      baseimage: "libfuzzer"
+      fc_configpath: "/Config/libfuzzer-botan.toml"
+      image_name: "libfuzzer-botan"
+      memory: "8g"
+      cpuset: "81-83"
+      resultsdir: "Results/"
+      configdir: "FCConfig/LIBFUZZER"
+    
+    cryptopp:
+      path: "TestSubjects/Crypto++"
+      harnessdir: "libfuzzer" # must be under path
+      baseimage: "libfuzzer"
+      fc_configpath: "/Config/libfuzzer-cryptopp.toml"
+      image_name: "libfuzzer-cryptopp"
+      memory: "8g"
+      cpuset: "84-86"
+      resultsdir: "Results/"
+      configdir: "FCConfig/LIBFUZZER"
+    
+    gnutls:
+      path: "TestSubjects/GnuTLS"
+      harnessdir: "libfuzzer" # must be under path
+      baseimage: "libfuzzer"
+      fc_configpath: "/Config/libfuzzer-gnutls.toml"
+      image_name: "libfuzzer-gnutls"
+      memory: "8g"
+      cpuset: "87-89"
+      resultsdir: "Results/"
+      configdir: "FCConfig/LIBFUZZER"
+
+    hostapd:
+      path: "TestSubjects/Hostapd"
+      harnessdir: "libfuzzer" # must be under path
+      baseimage: "libfuzzer"
+      fc_configpath: "/Config/libfuzzer-hostapd.toml"
+      image_name: "libfuzzer-hostapd"
+      memory: "8g"
+      cpuset: "90-92"
+      resultsdir: "Results/"
+      configdir: "FCConfig/LIBFUZZER"
+
+    libtomcrypt:
+      path: "TestSubjects/LibTomCrypt"
+      harnessdir: "libfuzzer" # must be under path
+      baseimage: "libfuzzer" # baseimage is the name of the docker image with the FUZZEVAL_TAG tag "numan947/libfuzzer:fuzzer"
+      fc_configpath: "/Config/libfuzzer-libtomcrypt.toml"
+      image_name: "libfuzzer-libtomcrypt" # image will be created with the name and the FUZZEVAL_TAG tag
+      memory: "8g"
+      cpuset: "93-95"
+      resultsdir: "Results/"
+      configdir: "FCConfig/LIBFUZZER"
+    
+
+    matrixssl:
+      path: "TestSubjects/MatrixSSL"
+      harnessdir: "libfuzzer" # must be under path
+      baseimage: "libfuzzer"
+      fc_configpath: "/Config/libfuzzer-matrixssl.toml"
+      image_name: "libfuzzer-matrixssl"
+      memory: "8g"
+      cpuset: "96-98"
+      resultsdir: "Results/"
+      configdir: "FCConfig/LIBFUZZER"
+
+    mbedtls:
+      path: "TestSubjects/MBedTLS"
+      harnessdir: "libfuzzer" # must be under path
+      baseimage: "libfuzzer"
+      fc_configpath: "/Config/libfuzzer-mbedtls.toml"
+      image_name: "libfuzzer-mbedtls"
+      memory: "8g"
+      cpuset: "99-101"
+      resultsdir: "Results/"
+      configdir: "FCConfig/LIBFUZZER"
+
+    openssl3:
+      path: "TestSubjects/OpenSSL3"
+      harnessdir: "libfuzzer" # must be under path
+      baseimage: "libfuzzer"
+      fc_configpath: "/Config/libfuzzer-openssl.toml"
+      image_name: "libfuzzer-openssl3"
+      memory: "8g"
+      cpuset: "102-104"
+      resultsdir: "Results/"
+      configdir: "FCConfig/LIBFUZZER"
+
+    openssl1:
+      path: "TestSubjects/OpenSSL1"
+      harnessdir: "libfuzzer" # must be under path
+      baseimage: "libfuzzer"
+      fc_configpath: "/Config/libfuzzer-openssl1.toml"
+      image_name: "libfuzzer-openssl1"
+      memory: "8g"
+      cpuset: "105-107"
+      resultsdir: "Results/"
+      configdir: "FCConfig/LIBFUZZER"
+
+    openswan:
+      path: "TestSubjects/OpenSwan"
+      harnessdir: "libfuzzer" # must be under path
+      baseimage: "libfuzzer"
+      fc_configpath: "/Config/libfuzzer-openswan.toml"
+      image_name: "libfuzzer-openswan"
+      memory: "8g"
+      cpuset: "108-110"
+      resultsdir: "Results/"
+      configdir: "FCConfig/LIBFUZZER"
+
+    strongswan:
+      path: "TestSubjects/StrongSwan"
+      harnessdir: "libfuzzer" # must be under path
+      baseimage: "libfuzzer"
+      fc_configpath: "/Config/libfuzzer-strongswan.toml"
+      image_name: "libfuzzer-strongswan"
+      memory: "8g"
+      cpuset: "111-113"
+      resultsdir: "Results/"
+      configdir: "FCConfig/LIBFUZZER"
+
+    wpasupplicant:
+      path: "TestSubjects/WpaSupplicant"
+      harnessdir: "libfuzzer" # must be under path
+      baseimage: "libfuzzer"
+      fc_configpath: "/Config/libfuzzer-wpasupplicant.toml"
+      image_name: "libfuzzer-wpasupplicant"
+      memory: "8g"
+      cpuset: "114-116"
+      resultsdir: "Results/"
+      configdir: "FCConfig/LIBFUZZER"

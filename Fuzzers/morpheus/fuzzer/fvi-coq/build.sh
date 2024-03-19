@@ -1,0 +1,1 @@
+ocamlc -o oracle pkcs1.mli pkcs1.ml oracle.ml

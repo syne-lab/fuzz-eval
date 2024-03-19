@@ -1,0 +1,27 @@
+diff -ruN ./axtls-code/ssl/crypto_misc.h ./axTLS-2.1.5/ssl/crypto_misc.h
+--- ./axtls-code/ssl/crypto_misc.h	2017-02-19 05:16:05.000000000 +0800
++++ ./axTLS-2.1.5/ssl/crypto_misc.h	2021-04-15 13:28:16.495871530 +0800
+@@ -129,6 +129,11 @@
+ const char * x509_display_error(int error);
+ #endif
+ 
++/* Cyiu: declaring sig_verify and get_signature
++ * so that we can use them in the test harness */
++bigint *sig_verify(BI_CTX *ctx, const uint8_t *sig, int sig_len,
++        uint8_t sig_type, bigint *modulus, bigint *pub_exp);
++
+ /**************************************************************************
+  * ASN1 declarations 
+  **************************************************************************/
+diff -ruN ./axtls-code/ssl/x509.c ./axTLS-2.1.5/ssl/x509.c
+--- ./axtls-code/ssl/x509.c	2019-03-15 19:04:24.000000000 +0800
++++ ./axTLS-2.1.5/ssl/x509.c	2021-04-15 13:28:47.447858757 +0800
+@@ -379,7 +379,7 @@
+ /**
+  * Take a signature and decrypt it.
+  */
+-static bigint *sig_verify(BI_CTX *ctx, const uint8_t *sig, int sig_len, 
++bigint *sig_verify(BI_CTX *ctx, const uint8_t *sig, int sig_len, 
+         uint8_t sig_type, bigint *modulus, bigint *pub_exp)
+ {
+     int i;

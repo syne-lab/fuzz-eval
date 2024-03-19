@@ -1,0 +1,147 @@
+# AFL++ 4.07
+nautilus: # should be in the name of the image (e.g, image name will be "numan947/afl++-4.07:fuzzer")
+  name: "NAUTILUS"
+  testsubjects:
+    axtls:
+      path: "TestSubjects/AxTLS"
+      harnessdir: "default" # must be under path
+      baseimage: "nautilus"
+      fc_configpath: "/Config/nautilus-axtls.toml"
+      image_name: "nautilus-axtls"
+      #below are running config
+      memory: "8g"
+      cpuset: "39-41"
+      resultsdir: "Results/"
+      configdir: "FCConfig/NAUTILUS"
+    
+    botan:
+      path: "TestSubjects/Botan"
+      harnessdir: "default" # must be under path
+      baseimage: "nautilus"
+      fc_configpath: "/Config/nautilus-botan.toml"
+      image_name: "nautilus-botan"
+      memory: "8g"
+      cpuset: "42-44"
+      resultsdir: "Results/"
+      configdir: "FCConfig/NAUTILUS"
+
+    cryptopp:
+      path: "TestSubjects/Crypto++"
+      harnessdir: "default" # must be under path
+      baseimage: "nautilus"
+      fc_configpath: "/Config/nautilus-cryptopp.toml"
+      image_name: "nautilus-cryptopp"
+      memory: "8g"
+      cpuset: "45-47"
+      resultsdir: "Results/"
+      configdir: "FCConfig/NAUTILUS"
+
+    gnutls:
+      path: "TestSubjects/GnuTLS"
+      harnessdir: "default" # must be under path
+      baseimage: "nautilus"
+      fc_configpath: "/Config/nautilus-gnutls.toml"
+      image_name: "nautilus-gnutls"
+      memory: "8g"
+      cpuset: "48-50"
+      resultsdir: "Results/"
+      configdir: "FCConfig/NAUTILUS"
+
+    hostapd:
+      path: "TestSubjects/Hostapd"
+      harnessdir: "default" # must be under path
+      baseimage: "nautilus"
+      fc_configpath: "/Config/nautilus-hostapd.toml"
+      image_name: "nautilus-hostapd"
+      memory: "8g"
+      cpuset: "51-53"
+      resultsdir: "Results/"
+      configdir: "FCConfig/NAUTILUS"
+
+    libtomcrypt:
+      path: "TestSubjects/LibTomCrypt"
+      harnessdir: "default" # must be under path
+      baseimage: "nautilus" # baseimage is the name of the docker image with the FUZZEVAL_TAG tag
+      fc_configpath: "/Config/nautilus-libtomcrypt.toml"
+      image_name: "nautilus-libtomcrypt" # image will be created with the name and the FUZZEVAL_TAG tag
+      memory: "8g"
+      cpuset: "54-56"
+      resultsdir: "Results/"
+      configdir: "FCConfig/NAUTILUS"
+
+    matrixssl:
+      path: "TestSubjects/MatrixSSL"
+      harnessdir: "default" # must be under path
+      baseimage: "nautilus"
+      fc_configpath: "/Config/nautilus-matrixssl.toml"
+      image_name: "nautilus-matrixssl"
+      memory: "8g"
+      cpuset: "57-59"
+      resultsdir: "Results/"
+      configdir: "FCConfig/NAUTILUS"
+
+    mbedtls:
+      path: "TestSubjects/MBedTLS"
+      harnessdir: "default" # must be under path
+      baseimage: "nautilus"
+      fc_configpath: "/Config/nautilus-mbedtls.toml"
+      image_name: "nautilus-mbedtls"
+      memory: "8g"
+      cpuset: "60-62"
+      resultsdir: "Results/"
+      configdir: "FCConfig/NAUTILUS"
+
+    openssl3:
+      path: "TestSubjects/OpenSSL3"
+      harnessdir: "default" # must be under path
+      baseimage: "nautilus"
+      fc_configpath: "/Config/nautilus-openssl.toml"
+      image_name: "nautilus-openssl3"
+      memory: "8g"
+      cpuset: "63-65"
+      resultsdir: "Results/"
+      configdir: "FCConfig/NAUTILUS"
+
+    openssl1:
+      path: "TestSubjects/OpenSSL1"
+      harnessdir: "default" # must be under path
+      baseimage: "nautilus"
+      fc_configpath: "/Config/nautilus-openssl1.toml"
+      image_name: "nautilus-openssl1"
+      memory: "8g"
+      cpuset: "66-68"
+      resultsdir: "Results/"
+      configdir: "FCConfig/NAUTILUS"
+
+    openswan:
+      path: "TestSubjects/OpenSwan"
+      harnessdir: "default" # must be under path
+      baseimage: "nautilus"
+      fc_configpath: "/Config/nautilus-openswan.toml"
+      image_name: "nautilus-openswan"
+      memory: "8g"
+      cpuset: "69-71"
+      resultsdir: "Results/"
+      configdir: "FCConfig/NAUTILUS"
+
+    strongswan:
+      path: "TestSubjects/StrongSwan"
+      harnessdir: "default" # must be under path
+      baseimage: "nautilus"
+      fc_configpath: "/Config/nautilus-strongswan.toml"
+      image_name: "nautilus-strongswan"
+      memory: "8g"
+      cpuset: "72-74"
+      resultsdir: "Results/"
+      configdir: "FCConfig/NAUTILUS"
+
+    wpasupplicant:
+      path: "TestSubjects/WpaSupplicant"
+      harnessdir: "default" # must be under path
+      baseimage: "nautilus"
+      fc_configpath: "/Config/nautilus-wpasupplicant.toml"
+      image_name: "nautilus-wpasupplicant"
+      memory: "8g"
+      cpuset: "75-77"
+      resultsdir: "Results/"
+      configdir: "FCConfig/NAUTILUS"

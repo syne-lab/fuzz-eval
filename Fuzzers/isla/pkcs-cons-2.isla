@@ -1,0 +1,11 @@
+str.len(<pkcs>.<PL>) = 512 - str.len(<pkcs>.<PB>) - 6
+
+and
+
+str.len(<pkcs>.<PB>) mod 2 = 0 and str.len(<pkcs>.<PB>) >=16
+
+and
+
+str.len(<pkcs>.<PL>) mod 2 = 0 and str.len(<pkcs>.<PL>) > 0
+
+ 

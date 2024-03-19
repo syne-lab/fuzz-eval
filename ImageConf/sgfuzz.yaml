@@ -1,0 +1,147 @@
+sgfuzz: # should be in the name of the image (e.g, image name will be "numan947/sgfuzz:fuzzer")
+  name: "SGFUZZ"
+  testsubjects:
+    axtls:
+      path: "TestSubjects/AxTLS"
+      harnessdir: "sgfuzz" # must be under path
+      baseimage: "sgfuzz"
+      fc_configpath: "/Config/sgfuzz-axtls.toml"
+      image_name: "sgfuzz-axtls"
+      #below are running config
+      memory: "8g"
+      cpuset: "78-80"
+      resultsdir: "Results/"
+      configdir: "FCConfig/SGFUZZ"
+    
+    botan:
+      path: "TestSubjects/Botan"
+      harnessdir: "sgfuzz" # must be under path
+      baseimage: "sgfuzz"
+      fc_configpath: "/Config/sgfuzz-botan.toml"
+      image_name: "sgfuzz-botan"
+      memory: "8g"
+      cpuset: "81-83"
+      resultsdir: "Results/"
+      configdir: "FCConfig/SGFUZZ"
+    
+    cryptopp:
+      path: "TestSubjects/Crypto++"
+      harnessdir: "sgfuzz" # must be under path
+      baseimage: "sgfuzz"
+      fc_configpath: "/Config/sgfuzz-cryptopp.toml"
+      image_name: "sgfuzz-cryptopp"
+      memory: "8g"
+      cpuset: "84-86"
+      resultsdir: "Results/"
+      configdir: "FCConfig/SGFUZZ"
+    
+    gnutls:
+      path: "TestSubjects/GnuTLS"
+      harnessdir: "sgfuzz" # must be under path
+      baseimage: "sgfuzz"
+      fc_configpath: "/Config/sgfuzz-gnutls.toml"
+      image_name: "sgfuzz-gnutls"
+      memory: "8g"
+      cpuset: "87-89"
+      resultsdir: "Results/"
+      configdir: "FCConfig/SGFUZZ"
+
+    hostapd:
+      path: "TestSubjects/Hostapd"
+      harnessdir: "sgfuzz" # must be under path
+      baseimage: "sgfuzz"
+      fc_configpath: "/Config/sgfuzz-hostapd.toml"
+      image_name: "sgfuzz-hostapd"
+      memory: "8g"
+      cpuset: "90-92"
+      resultsdir: "Results/"
+      configdir: "FCConfig/SGFUZZ"
+
+    libtomcrypt:
+      path: "TestSubjects/LibTomCrypt"
+      harnessdir: "sgfuzz" # must be under path
+      baseimage: "sgfuzz" # baseimage is the name of the docker image with the FUZZEVAL_TAG tag "numan947/sgfuzz:fuzzer"
+      fc_configpath: "/Config/sgfuzz-libtomcrypt.toml"
+      image_name: "sgfuzz-libtomcrypt" # image will be created with the name and the FUZZEVAL_TAG tag
+      memory: "8g"
+      cpuset: "93-95"
+      resultsdir: "Results/"
+      configdir: "FCConfig/SGFUZZ"
+    
+
+    matrixssl:
+      path: "TestSubjects/MatrixSSL"
+      harnessdir: "sgfuzz" # must be under path
+      baseimage: "sgfuzz"
+      fc_configpath: "/Config/sgfuzz-matrixssl.toml"
+      image_name: "sgfuzz-matrixssl"
+      memory: "8g"
+      cpuset: "96-98"
+      resultsdir: "Results/"
+      configdir: "FCConfig/SGFUZZ"
+
+    mbedtls:
+      path: "TestSubjects/MBedTLS"
+      harnessdir: "sgfuzz" # must be under path
+      baseimage: "sgfuzz"
+      fc_configpath: "/Config/sgfuzz-mbedtls.toml"
+      image_name: "sgfuzz-mbedtls"
+      memory: "8g"
+      cpuset: "99-101"
+      resultsdir: "Results/"
+      configdir: "FCConfig/SGFUZZ"
+
+    openssl3:
+      path: "TestSubjects/OpenSSL3"
+      harnessdir: "sgfuzz" # must be under path
+      baseimage: "sgfuzz"
+      fc_configpath: "/Config/sgfuzz-openssl.toml"
+      image_name: "sgfuzz-openssl3"
+      memory: "8g"
+      cpuset: "102-104"
+      resultsdir: "Results/"
+      configdir: "FCConfig/SGFUZZ"
+
+    openssl1:
+      path: "TestSubjects/OpenSSL1"
+      harnessdir: "sgfuzz" # must be under path
+      baseimage: "sgfuzz"
+      fc_configpath: "/Config/sgfuzz-openssl1.toml"
+      image_name: "sgfuzz-openssl1"
+      memory: "8g"
+      cpuset: "105-107"
+      resultsdir: "Results/"
+      configdir: "FCConfig/SGFUZZ"
+
+    openswan:
+      path: "TestSubjects/OpenSwan"
+      harnessdir: "sgfuzz" # must be under path
+      baseimage: "sgfuzz"
+      fc_configpath: "/Config/sgfuzz-openswan.toml"
+      image_name: "sgfuzz-openswan"
+      memory: "8g"
+      cpuset: "108-110"
+      resultsdir: "Results/"
+      configdir: "FCConfig/SGFUZZ"
+
+    strongswan:
+      path: "TestSubjects/StrongSwan"
+      harnessdir: "sgfuzz" # must be under path
+      baseimage: "sgfuzz"
+      fc_configpath: "/Config/sgfuzz-strongswan.toml"
+      image_name: "sgfuzz-strongswan"
+      memory: "8g"
+      cpuset: "111-113"
+      resultsdir: "Results/"
+      configdir: "FCConfig/SGFUZZ"
+
+    wpasupplicant:
+      path: "TestSubjects/WpaSupplicant"
+      harnessdir: "sgfuzz" # must be under path
+      baseimage: "sgfuzz"
+      fc_configpath: "/Config/sgfuzz-wpasupplicant.toml"
+      image_name: "sgfuzz-wpasupplicant"
+      memory: "8g"
+      cpuset: "114-116"
+      resultsdir: "Results/"
+      configdir: "FCConfig/SGFUZZ"

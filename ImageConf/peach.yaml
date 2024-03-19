@@ -1,0 +1,147 @@
+peach: # should be in the name of the image (e.g, image name will be "numan947/peach:fuzzer")
+  name: "PEACH-3.0.202"
+  testsubjects:
+    axtls:
+      path: "TestSubjects/AxTLS"
+      harnessdir: "peach" # must be under path
+      baseimage: "peach"
+      fc_configpath: "/Config/peach-axtls.toml"
+      image_name: "peach-axtls"
+      #below are running config
+      memory: "8g"
+      cpuset: "78-80"
+      resultsdir: "Results/"
+      configdir: "FCConfig/PEACH"
+    
+    botan:
+      path: "TestSubjects/Botan"
+      harnessdir: "peach" # must be under path
+      baseimage: "peach"
+      fc_configpath: "/Config/peach-botan.toml"
+      image_name: "peach-botan"
+      memory: "8g"
+      cpuset: "81-83"
+      resultsdir: "Results/"
+      configdir: "FCConfig/PEACH"
+    
+    cryptopp:
+      path: "TestSubjects/Crypto++"
+      harnessdir: "peach" # must be under path
+      baseimage: "peach"
+      fc_configpath: "/Config/peach-cryptopp.toml"
+      image_name: "peach-cryptopp"
+      memory: "8g"
+      cpuset: "84-86"
+      resultsdir: "Results/"
+      configdir: "FCConfig/PEACH"
+    
+    gnutls:
+      path: "TestSubjects/GnuTLS"
+      harnessdir: "peach" # must be under path
+      baseimage: "peach"
+      fc_configpath: "/Config/peach-gnutls.toml"
+      image_name: "peach-gnutls"
+      memory: "8g"
+      cpuset: "87-89"
+      resultsdir: "Results/"
+      configdir: "FCConfig/PEACH"
+
+    hostapd:
+      path: "TestSubjects/Hostapd"
+      harnessdir: "peach" # must be under path
+      baseimage: "peach"
+      fc_configpath: "/Config/peach-hostapd.toml"
+      image_name: "peach-hostapd"
+      memory: "8g"
+      cpuset: "90-92"
+      resultsdir: "Results/"
+      configdir: "FCConfig/PEACH"
+
+    libtomcrypt:
+      path: "TestSubjects/LibTomCrypt"
+      harnessdir: "peach" # must be under path
+      baseimage: "peach" # baseimage is the name of the docker image with the FUZZEVAL_TAG tag "numan947/peach:fuzzer"
+      fc_configpath: "/Config/peach-libtomcrypt.toml"
+      image_name: "peach-libtomcrypt" # image will be created with the name and the FUZZEVAL_TAG tag
+      memory: "8g"
+      cpuset: "93-95"
+      resultsdir: "Results/"
+      configdir: "FCConfig/PEACH"
+    
+
+    matrixssl:
+      path: "TestSubjects/MatrixSSL"
+      harnessdir: "peach" # must be under path
+      baseimage: "peach"
+      fc_configpath: "/Config/peach-matrixssl.toml"
+      image_name: "peach-matrixssl"
+      memory: "8g"
+      cpuset: "96-98"
+      resultsdir: "Results/"
+      configdir: "FCConfig/PEACH"
+
+    mbedtls:
+      path: "TestSubjects/MBedTLS"
+      harnessdir: "peach" # must be under path
+      baseimage: "peach"
+      fc_configpath: "/Config/peach-mbedtls.toml"
+      image_name: "peach-mbedtls"
+      memory: "8g"
+      cpuset: "99-101"
+      resultsdir: "Results/"
+      configdir: "FCConfig/PEACH"
+
+    openssl3:
+      path: "TestSubjects/OpenSSL3"
+      harnessdir: "peach" # must be under path
+      baseimage: "peach"
+      fc_configpath: "/Config/peach-openssl.toml"
+      image_name: "peach-openssl3"
+      memory: "8g"
+      cpuset: "102-104"
+      resultsdir: "Results/"
+      configdir: "FCConfig/PEACH"
+
+    openssl1:
+      path: "TestSubjects/OpenSSL1"
+      harnessdir: "peach" # must be under path
+      baseimage: "peach"
+      fc_configpath: "/Config/peach-openssl1.toml"
+      image_name: "peach-openssl1"
+      memory: "8g"
+      cpuset: "105-107"
+      resultsdir: "Results/"
+      configdir: "FCConfig/PEACH"
+
+    openswan:
+      path: "TestSubjects/OpenSwan"
+      harnessdir: "peach" # must be under path
+      baseimage: "peach"
+      fc_configpath: "/Config/peach-openswan.toml"
+      image_name: "peach-openswan"
+      memory: "8g"
+      cpuset: "108-110"
+      resultsdir: "Results/"
+      configdir: "FCConfig/PEACH"
+
+    strongswan:
+      path: "TestSubjects/StrongSwan"
+      harnessdir: "peach" # must be under path
+      baseimage: "peach"
+      fc_configpath: "/Config/peach-strongswan.toml"
+      image_name: "peach-strongswan"
+      memory: "8g"
+      cpuset: "111-113"
+      resultsdir: "Results/"
+      configdir: "FCConfig/PEACH"
+
+    wpasupplicant:
+      path: "TestSubjects/WpaSupplicant"
+      harnessdir: "peach" # must be under path
+      baseimage: "peach"
+      fc_configpath: "/Config/peach-wpasupplicant.toml"
+      image_name: "peach-wpasupplicant"
+      memory: "8g"
+      cpuset: "114-116"
+      resultsdir: "Results/"
+      configdir: "FCConfig/PEACH"

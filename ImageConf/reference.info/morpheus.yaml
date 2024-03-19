@@ -1,0 +1,147 @@
+# AFL++ 4.07
+morpheus: # should be in the name of the image (e.g, image name will be "numan947/afl++-4.07:fuzzer")
+  name: "Morpheus"
+  testsubjects:
+    axtls:
+      path: "TestSubjects/AxTLS"
+      harnessdir: "morpheus" # must be under path
+      baseimage: "morpheus"
+      fc_configpath: "/Config/morpheus-axtls.toml"
+      image_name: "morpheus-axtls"
+      #below are running config
+      memory: "8g"
+      cpuset: "0-2"
+      resultsdir: "Results/"
+      configdir: "FCConfig/MORPHEUS"
+    
+    botan:
+      path: "TestSubjects/Botan"
+      harnessdir: "morpheus" # must be under path
+      baseimage: "morpheus"
+      fc_configpath: "/Config/morpheus-botan.toml"
+      image_name: "morpheus-botan"
+      memory: "8g"
+      cpuset: "3-5"
+      resultsdir: "Results/"
+      configdir: "FCConfig/MORPHEUS"
+
+    cryptopp:
+      path: "TestSubjects/Crypto++"
+      harnessdir: "morpheus" # must be under path
+      baseimage: "morpheus"
+      fc_configpath: "/Config/morpheus-cryptopp.toml"
+      image_name: "morpheus-cryptopp"
+      memory: "8g"
+      cpuset: "6-8"
+      resultsdir: "Results/"
+      configdir: "FCConfig/MORPHEUS"
+
+    gnutls:
+      path: "TestSubjects/GnuTLS"
+      harnessdir: "morpheus" # must be under path
+      baseimage: "morpheus"
+      fc_configpath: "/Config/morpheus-gnutls.toml"
+      image_name: "morpheus-gnutls"
+      memory: "8g"
+      cpuset: "9-11"
+      resultsdir: "Results/"
+      configdir: "FCConfig/MORPHEUS"
+
+    hostapd:
+      path: "TestSubjects/Hostapd"
+      harnessdir: "morpheus" # must be under path
+      baseimage: "morpheus"
+      fc_configpath: "/Config/morpheus-hostapd.toml"
+      image_name: "morpheus-hostapd"
+      memory: "8g"
+      cpuset: "0-2"
+      resultsdir: "Results/"
+      configdir: "FCConfig/MORPHEUS"
+
+    libtomcrypt:
+      path: "TestSubjects/LibTomCrypt"
+      harnessdir: "morpheus" # must be under path
+      baseimage: "morpheus" # baseimage is the name of the docker image with the FUZZEVAL_TAG tag
+      fc_configpath: "/Config/morpheus-libtomcrypt.toml"
+      image_name: "morpheus-libtomcrypt" # image will be created with the name and the FUZZEVAL_TAG tag
+      memory: "8g"
+      cpuset: "3-5"
+      resultsdir: "Results/"
+      configdir: "FCConfig/MORPHEUS"
+
+    matrixssl:
+      path: "TestSubjects/MatrixSSL"
+      harnessdir: "morpheus" # must be under path
+      baseimage: "morpheus"
+      fc_configpath: "/Config/morpheus-matrixssl.toml"
+      image_name: "morpheus-matrixssl"
+      memory: "8g"
+      cpuset: "6-8"
+      resultsdir: "Results/"
+      configdir: "FCConfig/MORPHEUS"
+
+    mbedtls:
+      path: "TestSubjects/MBedTLS"
+      harnessdir: "morpheus" # must be under path
+      baseimage: "morpheus"
+      fc_configpath: "/Config/morpheus-mbedtls.toml"
+      image_name: "morpheus-mbedtls"
+      memory: "8g"
+      cpuset: "9-11"
+      resultsdir: "Results/"
+      configdir: "FCConfig/MORPHEUS"
+
+    openssl3:
+      path: "TestSubjects/OpenSSL3"
+      harnessdir: "morpheus" # must be under path
+      baseimage: "morpheus"
+      fc_configpath: "/Config/morpheus-openssl.toml"
+      image_name: "morpheus-openssl3"
+      memory: "8g"
+      cpuset: "0-2"
+      resultsdir: "Results/"
+      configdir: "FCConfig/MORPHEUS"
+
+    openssl1:
+      path: "TestSubjects/OpenSSL1"
+      harnessdir: "morpheus" # must be under path
+      baseimage: "morpheus"
+      fc_configpath: "/Config/morpheus-openssl1.toml"
+      image_name: "morpheus-openssl1"
+      memory: "8g"
+      cpuset: "3-5"
+      resultsdir: "Results/"
+      configdir: "FCConfig/MORPHEUS"
+
+    openswan:
+      path: "TestSubjects/OpenSwan"
+      harnessdir: "morpheus" # must be under path
+      baseimage: "morpheus"
+      fc_configpath: "/Config/morpheus-openswan.toml"
+      image_name: "morpheus-openswan"
+      memory: "8g"
+      cpuset: "6-8"
+      resultsdir: "Results/"
+      configdir: "FCConfig/MORPHEUS"
+
+    strongswan:
+      path: "TestSubjects/StrongSwan"
+      harnessdir: "morpheus" # must be under path
+      baseimage: "morpheus"
+      fc_configpath: "/Config/morpheus-strongswan.toml"
+      image_name: "morpheus-strongswan"
+      memory: "8g"
+      cpuset: "9-11"
+      resultsdir: "Results/"
+      configdir: "FCConfig/MORPHEUS"
+
+    wpasupplicant:
+      path: "TestSubjects/WpaSupplicant"
+      harnessdir: "morpheus" # must be under path
+      baseimage: "morpheus"
+      fc_configpath: "/Config/morpheus-wpasupplicant.toml"
+      image_name: "morpheus-wpasupplicant"
+      memory: "8g"
+      cpuset: "0-2"
+      resultsdir: "Results/"
+      configdir: "FCConfig/MORPHEUS"

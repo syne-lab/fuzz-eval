@@ -1,0 +1,16 @@
+results_dir = "/Results/" # directory for creating folder and files and save the results
+fc_name="peach-hostapd" # name of the fuzzing campaign, will be used for creating a folder
+
+server_port=7005 # port for running the server
+server_log_file_prefix="log_"
+server_backlog = 15000
+server_stop_command="STOP_SERVER_NOW"
+
+
+fuzzer_fuzztime=320 # seconds
+fuzzer_harness_path="/target/pkcs_template2.xml" # should be absolute path
+
+# fuzzer command to run the fuzzer
+fuzzer_command="/peach-3.0.202/output/linux_x86_64_release/bin/peach --seed RNG HARNESSPATH" 
+
+rng_seedlist=[497] # optional, list of seeds to be used with rng, if used then in the fuzzer command, specify the position using RNG special string

@@ -1,0 +1,147 @@
+# AFLSMART
+aflsmart: # should be in the name of the image (e.g, image name will be "numan947/afl++-4.07:fuzzer")
+  name: "AFLSMART"
+  testsubjects:
+    axtls:
+      path: "TestSubjects/AxTLS"
+      harnessdir: "default" # must be under path
+      baseimage: "aflsmart"
+      fc_configpath: "/Config/aflsmart-axtls.toml"
+      image_name: "aflsmart-axtls"
+      #below are running config
+      memory: "8g"
+      cpuset: "78-80"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLSMART"
+    
+    botan:
+      path: "TestSubjects/Botan"
+      harnessdir: "default" # must be under path
+      baseimage: "aflsmart"
+      fc_configpath: "/Config/aflsmart-botan.toml"
+      image_name: "aflsmart-botan"
+      memory: "8g"
+      cpuset: "81-83"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLSMART"
+
+    cryptopp:
+      path: "TestSubjects/Crypto++"
+      harnessdir: "default" # must be under path
+      baseimage: "aflsmart"
+      fc_configpath: "/Config/aflsmart-cryptopp.toml"
+      image_name: "aflsmart-cryptopp"
+      memory: "8g"
+      cpuset: "84-86"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLSMART"
+
+    gnutls:
+      path: "TestSubjects/GnuTLS"
+      harnessdir: "default" # must be under path
+      baseimage: "aflsmart"
+      fc_configpath: "/Config/aflsmart-gnutls.toml"
+      image_name: "aflsmart-gnutls"
+      memory: "8g"
+      cpuset: "87-89"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLSMART"
+
+    hostapd:
+      path: "TestSubjects/Hostapd"
+      harnessdir: "default" # must be under path
+      baseimage: "aflsmart"
+      fc_configpath: "/Config/aflsmart-hostapd.toml"
+      image_name: "aflsmart-hostapd"
+      memory: "8g"
+      cpuset: "90-92"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLSMART"
+
+    libtomcrypt:
+      path: "TestSubjects/LibTomCrypt"
+      harnessdir: "default" # must be under path
+      baseimage: "aflsmart" # baseimage is the name of the docker image with the FUZZEVAL_TAG tag
+      fc_configpath: "/Config/aflsmart-libtomcrypt.toml"
+      image_name: "aflsmart-libtomcrypt" # image will be created with the name and the FUZZEVAL_TAG tag
+      memory: "8g"
+      cpuset: "93-95"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLSMART"
+
+    matrixssl:
+      path: "TestSubjects/MatrixSSL"
+      harnessdir: "default" # must be under path
+      baseimage: "aflsmart"
+      fc_configpath: "/Config/aflsmart-matrixssl.toml"
+      image_name: "aflsmart-matrixssl"
+      memory: "8g"
+      cpuset: "96-98"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLSMART"
+
+    mbedtls:
+      path: "TestSubjects/MBedTLS"
+      harnessdir: "default" # must be under path
+      baseimage: "aflsmart"
+      fc_configpath: "/Config/aflsmart-mbedtls.toml"
+      image_name: "aflsmart-mbedtls"
+      memory: "8g"
+      cpuset: "99-101"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLSMART"
+
+    openssl3:
+      path: "TestSubjects/OpenSSL3"
+      harnessdir: "default" # must be under path
+      baseimage: "aflsmart"
+      fc_configpath: "/Config/aflsmart-openssl.toml"
+      image_name: "aflsmart-openssl3"
+      memory: "8g"
+      cpuset: "102-104"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLSMART"
+
+    openssl1:
+      path: "TestSubjects/OpenSSL1"
+      harnessdir: "default" # must be under path
+      baseimage: "aflsmart"
+      fc_configpath: "/Config/aflsmart-openssl1.toml"
+      image_name: "aflsmart-openssl1"
+      memory: "8g"
+      cpuset: "105-107"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLSMART"
+
+    openswan:
+      path: "TestSubjects/OpenSwan"
+      harnessdir: "default" # must be under path
+      baseimage: "aflsmart"
+      fc_configpath: "/Config/aflsmart-openswan.toml"
+      image_name: "aflsmart-openswan"
+      memory: "8g"
+      cpuset: "108-110"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLSMART"
+
+    strongswan:
+      path: "TestSubjects/StrongSwan"
+      harnessdir: "default" # must be under path
+      baseimage: "aflsmart"
+      fc_configpath: "/Config/aflsmart-strongswan.toml"
+      image_name: "aflsmart-strongswan"
+      memory: "8g"
+      cpuset: "111-113"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLSMART"
+
+    wpasupplicant:
+      path: "TestSubjects/WpaSupplicant"
+      harnessdir: "default" # must be under path
+      baseimage: "aflsmart"
+      fc_configpath: "/Config/aflsmart-wpasupplicant.toml"
+      image_name: "aflsmart-wpasupplicant"
+      memory: "8g"
+      cpuset: "114-116"
+      resultsdir: "Results/"
+      configdir: "FCConfig/AFLSMART"

@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "STARTING FUZZING CAMPAIGN"
+pushd /target
+$USEDPYTHON $CONTROLLER -c $CONFIGPATH
+popd

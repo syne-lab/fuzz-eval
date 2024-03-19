@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Peach xmlns="http://peachfuzzer.com/2012/Peach"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://peachfuzzer.com/2012/Peach /peach/peach.xsd">
+
+
+	<Defaults>
+		<Number signed="false" />
+	</Defaults>
+
+	<DataModel name="PKCS">
+		<Number name="LeadingByte" size="8" value="0x00" valueType="hex" token="true" />
+		<Number name="BlockType" size="8" value="0x01" valueType="hex" token="true" />
+		<Block name="ArrayOfPaddingBytes">
+			<Number name="PaddingByte" size="8" value="0xff" valueType="hex" minOccurs="8"
+				maxOccurs="253" />
+		</Block>
+		<Number name="PaddingEnd" size="8" value="0x00" valueType="hex" token="true" />
+		<Block name="PayloadBytes">
+			<Number name="PayloadByte" size="8" value="0x00" valueType="hex" maxOccurs="245" />
+		</Block>
+
+	</DataModel>
+	
+
+
+    <StateModel name="TheState" initialState="Initial">
+        <State name="Initial">
+
+            <!-- Write out our wave file -->
+            <Action type="output">
+                <DataModel ref="PKCS"/>
+                <!-- This is our sample file to read in -->
+                <Data fileName="/dev/null"/>
+            </Action>
+
+            <Action type="close"/>
+
+        </State>
+    </StateModel>
+
+    <Test name="Default">
+        <StateModel ref="TheState"/>
+
+        <Publisher class="File">
+            <Param name="FileName" value="repaired"/>
+        </Publisher>
+
+        <Logger class="Filesystem">
+            <Param name="Path" value="logs" />
+        </Logger>
+    </Test>
+
+        
+</Peach>
+<!-- end -->
